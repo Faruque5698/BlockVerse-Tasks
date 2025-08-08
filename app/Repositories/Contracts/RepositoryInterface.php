@@ -11,7 +11,7 @@ interface RepositoryInterface
      * @return mixed
      */
 
-    public function all(array $data = []);
+    public function all();
 
     /**
      * @param int|string $id

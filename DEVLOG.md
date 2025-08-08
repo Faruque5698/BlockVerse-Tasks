@@ -7,8 +7,17 @@
 - [x] Initial commit push into GitHub 
 
 
-## 08-08-2025 8:30 PM - 10:00 PM 
-- [x] Solid principle code structure apply (8:46 PM)
-- [] Passport authentication apply
-- [] Register, login, logout api generate
-- [] Role permission apply using gate and policy
+## 08-08-2025 8:30 PM - 09-08-2025 1:30 AMM (Electricity issues)
+- [x] Solid principle code structure apply 
+- [x] Passport Install, User Role enum create, User table important column Indexing 
+- [x] Register, login, logout api generate
+- [x] Role permission apply 
+- [x] use gate and policy fo authorization
+- [x] create all solid principle interfaces
+
+## 09-08-2025 1.30 AM - 2.30 AM 
+- [x] Article crud using solid principle
+- [x] Article published and own article show
+
+## 09-08-2025 2.30 AM - 2.55 AM 
+- [x] DEVLOG.MD and README. MD update

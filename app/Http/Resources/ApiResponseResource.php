@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ApiResponseErrorResource extends JsonResource
+class ApiResponseResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,11 +15,11 @@ class ApiResponseErrorResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'success' => false,
-            'code' => $this->resource['code'] ?? 500,
-            'message' => $this->resource['message'] ?? 'Something went wrong',
+            'success' => true,
+            'code' => 200,
+            'message' => $this->resource['message'] ?? 'Success',
             'data' => null,
-            'errors' => $this->resource['errors']
+            'errors' => null,
         ];
     }
 }
