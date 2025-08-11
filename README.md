@@ -77,3 +77,21 @@ The Postman collection JSON file for testing all APIs is located in the [`Postma
 
 You can import this collection into Postman to quickly test the API endpoints with pre-configured requests and payloads.
 
+---
+## Issues & Support
+
+For any issues, bugs, or feature requests, please open an issue in the repository.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+If you have questions or want to discuss, reach me at:  
+**Email:** ashaduzzaman5698@gmail.com  
+**GitHub:** [github.com/Faruque5698](https://github.com/Faruque5698)
+
+---
+
+Thank you for reviewing this project. I look forward to your feedback!
