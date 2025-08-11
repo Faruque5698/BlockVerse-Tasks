@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
         Gate::define('assign-roles', fn (User $user) => $user->hasRolePermission('assign_roles'));
 
-        Gate::define('publish-articles', fn (User $user) => $user->hasRolePermission('publish_article'));
+        Gate::define('publish-article', fn (User $user) => $user->hasRolePermission('publish_article'));
 
         Gate::define('delete-articles', fn (User $user) => $user->hasRolePermission('delete_article'));
 
@@ -43,9 +43,9 @@ class AppServiceProvider extends ServiceProvider
 
         Gate::define('view-own-articles', fn (User $user) => $user->hasRolePermission('view_own_articles'));
 
-//        Passport::tokensExpireIn(Carbon::now()->addDays(15));
-//        Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
-//        Passport::personalAccessTokensExpireIn(Carbon::now()->addMonths(6));
+        Passport::tokensExpireIn(Carbon::now()->addDays(15));
+        Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
+        Passport::personalAccessTokensExpireIn(Carbon::now()->addMonths(6));
 
 
     }

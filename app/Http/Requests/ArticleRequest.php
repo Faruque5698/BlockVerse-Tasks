@@ -12,25 +12,7 @@ class ArticleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        if ($this->isMethod('post')) {
-            return auth()->check();
-        }
-
-        $articleId = $this->route('article') ?? $this->route('id');
-        if (!$articleId) {
-            return false;
-        }
-
-        if (is_object($articleId) && property_exists($articleId, 'user_id')) {
-            return auth()->id() === $articleId->user_id;
-        }
-
-        $creatorId = DB::table('articles')->where('id', $articleId)->value('user_id');
-        if (!$creatorId) {
-            return false;
-        }
-
-        return auth()->id() === $creatorId;
+        return true;
     }
 
     /**

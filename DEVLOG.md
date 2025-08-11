@@ -26,3 +26,8 @@
 - [x] PHP version downgrade (8.3 to 8.1) 
 - [x] Laravel version downgrade (12 to 10) 
 
+## 11-08-2025 12.12Pm to 1.24 PM 
+- [x] Add policy
+- [x] change request file
+- [x] cors and response json middleware added
+

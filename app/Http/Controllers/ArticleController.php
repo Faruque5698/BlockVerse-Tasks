@@ -10,13 +10,18 @@ use App\Services\Article\ArticleServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 
 class ArticleController extends Controller
 {
+    use AuthorizesRequests;
+
     protected $articleService;
     public function __construct(ArticleServiceInterface $articleService)
     {
         $this->articleService = $articleService;
+
     }
 
     /**
@@ -24,6 +29,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Article::class);
+
         $articles = $this->articleService->getAll();
 
         return(new ArticleResponseCollection($articles));
@@ -34,6 +41,8 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
+        $this->authorize('create', Article::class);
+
         $data = $request->validated();
         $data['user_id'] = Auth::guard('api')->id();
 
@@ -48,6 +57,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = $this->articleService->getById($id);
+        $this->authorize('view', $article);
 
         return (new ArticleResponseCollection(collect([$article])));
     }
@@ -57,11 +67,13 @@ class ArticleController extends Controller
      */
     public function update(ArticleRequest $request, $id)
     {
+        $article = Article::findOrFail($id);
+
+        $this->authorize('update', $article);
 
         $data = $request->validated();
 
-
-        $updatedArticle = $this->articleService->update($data, $id);
+        $updatedArticle = $this->articleService->update($data, $article->id);
 
         return new ArticleResponseCollection(collect([$updatedArticle]));
     }
@@ -71,7 +83,9 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        $this->articleService->delete($id);
+        $article = $this->articleService->getById($id);
+
+        $this->authorize('view', $article);
 
         return (new ApiResponseResource([
             'success' => true,
@@ -84,6 +98,8 @@ class ArticleController extends Controller
 
     public function publish($id)
     {
+        $article = Article::findOrFail($id);
+//        $this->authorize('publish', $article);
         $this->articleService->published($id);
 
         return (new ApiResponseResource([
@@ -97,7 +113,9 @@ class ArticleController extends Controller
 
     public function ownArticle()
     {
-      $data =   $this->articleService->ownArticle();
+        $this->authorize('viewAny', Article::class);
+
+        $data =   $this->articleService->ownArticle();
 
         return(new ArticleResponseCollection($data));
 

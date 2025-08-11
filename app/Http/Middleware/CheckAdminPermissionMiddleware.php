@@ -19,6 +19,7 @@ class CheckAdminPermissionMiddleware
     {
         if (! Gate::allows($permission)) {
             return (new ApiResponseErrorResource([
+                'code' => 403,
                 'message' => 'Unauthorized – Permission denied.',
                 'errors' => ['permission' => "Missing permission: {$permission}"],
             ]))->response()->setStatusCode(403);

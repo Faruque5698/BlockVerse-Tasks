@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use App\Http\Resources\ApiResponseErrorResource;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Support\Facades\Log;
@@ -48,8 +49,7 @@ class Handler extends ExceptionHandler
 
         if ($request->expectsJson() || $request->is('api/*')) {
             $code = 500;
-            $message = ['message' => $e->getMessage(),'file' => $e->getFile(),
-                'line' =>(int) $e->getLine(),];
+            $message = "something wen wrong";
             $errors = null;
 
             if ($e instanceof ValidationException) {
@@ -59,6 +59,9 @@ class Handler extends ExceptionHandler
             } elseif ($e instanceof AuthenticationException) {
                 $code = 401;
                 $message = 'Unauthenticated.';
+            }elseif ($e instanceof AuthorizationException) {
+                $code = 403;
+                $message = 'Unauthorized.';
             } elseif ($e instanceof NotFoundHttpException) {
                 $code = 404;
                 $message = 'Route not found.';

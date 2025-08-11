@@ -59,5 +59,9 @@ Amin credentials
 ```bash
 php artisan passport:install
 ```
+### Step 8: Run the project useing PHP Server 
+```json
+ php -S 127.0.0.1:8000 -t public
+```
 
 
