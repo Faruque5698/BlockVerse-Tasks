@@ -59,9 +59,21 @@ Amin credentials
 ```bash
 php artisan passport:install
 ```
-### Step 8: Run the project useing PHP Server 
+### Step 8: Run the project using PHP Server 
 ```json
  php -S 127.0.0.1:8000 -t public
 ```
 
+## Documentation 
+- **Role Permission Documentation:**  
+  Detailed roles and permissions with examples are available in [`ROLE-PERMISSION.md`](./ROLE-PERMISSION.md).
+
+- **API Documentation:**  
+  Complete list of API endpoints, request/response payloads, and examples are in [`API-DOCUMENTATION.md`](./API-DOCUMENTATION.md).
+
+---
+
+The Postman collection JSON file for testing all APIs is located in the [`Postman-json`](./Postman-json) folder.
+
+You can import this collection into Postman to quickly test the API endpoints with pre-configured requests and payloads.
 
