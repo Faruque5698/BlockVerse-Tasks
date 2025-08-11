@@ -96,14 +96,22 @@ User-Role Assignments:
 
 ## Proof of Concept: Test Request Payload and Responses
 ### Example 1: Check if Admin can assign roles
-### Request: POST /api/users/role/update
+### Request: POST `/api/users/role/update`
+
+**Headers:**
+```http
+Authorization: Bearer {your_access_token}
+```
+
+**Request Body:**
+
 ```json
 {
   "user_id": 2,
   "role": "author"
 }
 ```
-### Response: 
+**Response:**
 ```json
 {
     "success": true,
@@ -140,7 +148,14 @@ User-Role Assignments:
 ```
 
 ### Example 1: Author creating an article
-### Request: POST /api/articles
+### Request: POST `/api/articles`
+
+**Headers:**
+```http
+Authorization: Bearer {your_access_token}
+```
+
+**Request Body:**
 
 ```json
 {
@@ -150,7 +165,7 @@ User-Role Assignments:
 }
 
 ```
-### Response:
+**Response:**
 ```json
 {
     "success": true,
@@ -177,7 +192,14 @@ User-Role Assignments:
 ```
 
 ### Example 3: Author can update an article
-### Request: PUT /api/articles/update/1
+### Request: PUT `/api/articles/update/1`
+
+**Headers:**
+```http
+Authorization: Bearer {your_access_token}
+```
+**Request Body:**
+
 ```json
 {
   "title": "ok",
@@ -186,7 +208,7 @@ User-Role Assignments:
 
 ```
 
-### Response:
+**Response:**
 ```json
 {
     "success": true,

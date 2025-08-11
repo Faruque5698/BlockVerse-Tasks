@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
@@ -7,17 +6,20 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResponseResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
+    protected ?string $message;
+
+    public function __construct($resource, ?string $message = null)
+    {
+        parent::__construct($resource);
+        $this->message = $message ?? 'User fetched successfully';
+    }
+
     public function toArray(Request $request): array
     {
         return [
             'success' => true,
             'code' => 200,
-            'message' => 'User fetched successfully',
+            'message' => $this->message,
             'data' => [
                 'id' => $this->id,
                 'name' => $this->name,

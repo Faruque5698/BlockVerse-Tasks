@@ -48,7 +48,7 @@ class ArticleController extends Controller
 
         $article = $this->articleService->create($data);
 
-        return (new ArticleResponseCollection(collect([$article])));
+        return (new ArticleResponseCollection(collect([$article]),'Article create successfully'));
     }
 
     /**
@@ -75,7 +75,7 @@ class ArticleController extends Controller
 
         $updatedArticle = $this->articleService->update($data, $article->id);
 
-        return new ArticleResponseCollection(collect([$updatedArticle]));
+        return new ArticleResponseCollection(collect([$updatedArticle]),'Article update successfully');
     }
 
     /**
@@ -99,7 +99,7 @@ class ArticleController extends Controller
     public function publish($id)
     {
         $article = Article::findOrFail($id);
-//        $this->authorize('publish', $article);
+        $this->authorize('publish', $article);
         $this->articleService->published($id);
 
         return (new ApiResponseResource([
