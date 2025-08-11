@@ -17,6 +17,9 @@ class ArticleRepository implements ArticleRepositoryInterface
     public function all(){
         return $this->model->latest()->get();
     }
+    public function publishedArticle(){
+        return $this->model->where('published_at', '!=', null)->latest()->get();
+    }
     public function find($id){
       return $this->model->find($id);
     }

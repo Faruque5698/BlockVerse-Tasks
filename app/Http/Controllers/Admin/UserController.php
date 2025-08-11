@@ -73,6 +73,9 @@ class UserController extends Controller
 
         $user->roles()->sync([$role->id]);
 
-        return new UserResponseResource($user->load('roles'));
+        return new UserResponseResource(
+            $user->load('roles'),
+            'User role updated successfully.'
+        );
     }
 }

@@ -15,7 +15,12 @@ class ArticleService implements ArticleServiceInterface
 
     public function getAll()
     {
-        return $this->articleRepository->all();
+        if (auth()->guard('api')->user()->hasRole(['admin', 'editor'])) {
+            return $this->articleRepository->all();
+
+        } else {
+            return $this->articleRepository->publishedArticle();
+        }
     }
 
     public function getById($id)

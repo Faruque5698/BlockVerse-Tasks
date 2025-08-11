@@ -1,0 +1,1487 @@
+{
+	"info": {
+		"_postman_id": "43f6b471-7ae3-4464-b5c9-53996e205ab1",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15716619",
+		"_collection_link": "https://duruto.postman.co/workspace/BlockVerseTasks~40373be9-112e-4d9d-8a7e-152bec1800ae/collection/15716619-43f6b471-7ae3-4464-b5c9-53996e205ab1?action=share&source=collection_link&creator=15716619"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ashad\",\r\n    \"email\":\"ashad@example.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Ashad\",\r\n    \"email\":\"ashad@example.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 16:15:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Ashad\",\n            \"email\": \"ashad@example.com\",\n            \"role\": null\n        },\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4OGE2OC0yMThkLTcyNTUtYTM0NS1iZWY2YjMzMDI1YWUiLCJqdGkiOiJlZThjNjYxYzIzOTY3ZDkxOTAzNmI3MjU3ZTg4NGNkNmVlMDdhOTkyYmIwYmQ1ZDQ5Mzg0ZGJhNWFkZGE4MjFmZDU3YTYzNWNlNjc5ZjIxZCIsImlhdCI6MTc1NDY2OTc1NC41MzQ0NzUsIm5iZiI6MTc1NDY2OTc1NC41MzQ0NzcsImV4cCI6MTc3MDU2NzM1NC40MzE0MDUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.GtGpiaY1Lav8svqVMVI6l4CrPMMsaU0oXq0ScT2tDvzLVihAms2BT84rMoGUucpJ4BjQUY5U0aKmsSLxwOCCWh1bbksZlxmjzzNyaeySp-tVS7Al9O26xgMFlzRZdtaR7goGAgwB4Of-V8PuQytrEIh69BZL0GI2Tb8OkS50-N-aSW88a6BxZe7BYPHruFy6XEQ4y3wzMaXHGVnv3PsbnfUSvVfN6C_QTx0Av2st0gbUMzfrZrcR6O_yttVFctlZMx-T62f_D7U49OJvRSFLjQL2PjOYnAqqT4LpcLT8aN7r3zoO9q4P5S1QyUn8DfZZpoYwwHgoZkFfsBY_di_CMDQ-_iALFwaEWaYQMv84oEzHPmOkWds8Q4ylR-2B8Wbb2oAREcFhrjVvViY7I09rY25VwErRYs1IjRn_GkcU_SRqYyQclrZ_945Eux3t910_iQZMJhHGybTp3Ti0llF4M-1I8dw7kfmqVeK6_Qaeyu6rQAbjOkTfcPU5mPAjcIuo991l26q_bCWHhMaG7VziAsId9RSzVNbSOV-QVEQPcgr3Nbj8R8G9dtlOc1wkSDqKlC365SVSzAqferHjYI6ZTgLvxG-rWPIcBluah_pkVGTjvLI1eqGenEc7MNAt_6XpzfGinIjB76dWJ4hnYB1v02Ba02zdLESwULVvCI8CHos\",\n        \"token_type\": \"Bearer\"\n    },\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 17:26:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin User\",\n            \"email\": \"admin@example.com\",\n            \"roles\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"admin\"\n                }\n            ],\n            \"permissions\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"assign_roles\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"delete_article\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"publish_article\"\n                },\n                {\n                    \"id\": 1,\n                    \"name\": \"view_all_users\"\n                }\n            ]\n        },\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4OGFiNy1kZTQ4LTcyNDMtYjkwNC0xN2RjYTZkNjY4YmQiLCJqdGkiOiJhMGMzNjk3M2MzYjU1MzE0YmVkOTY3Yjc0MGIyZmYxYzI2NGU2YjhlZTMxYTM1MDg4ZGJmNDQ4YmNlYTBhMTM1NGRiMzFkMTc1ZTE2YzM4MCIsImlhdCI6MTc1NDY3Mzk2OC4xNzYzNDgsIm5iZiI6MTc1NDY3Mzk2OC4xNzYzNSwiZXhwIjoxNzcwNTcxNTY4LjExNzA1Mywic3ViIjoiMSIsInNjb3BlcyI6W119.n1piLwrNYdZMKvY0dZ9r726fqio8qb3cbHOvumEcrkMUmHskTo1RJNlSv5tTbQtePP-jSgQKQwfkF2m2NItcpXeAptfMtlsWbxc5QEekqdDoRa9qUXOuM46EwCFlTusL080eg9zGCmhfKqwNCThmgu9nvvAJkljzCmv0jWqIiVm4WzziIcvWRqbkUsc5PgQn76wtPai0qeQb8mBTJPrGDWZOHqsswcYjfrG8-YWTh4n6ruUBZLiOn-iNmIGuUFGc6BDH9egxmrp_4GZUIcWBNzdpzM7KtECHN4j0cW_oZ59oVoe2qkyORV2CLmlRfngQhwXlffuD0QzgT-UTdRzfvdyBQ6CKjY6aA6MaZT5XRIy43tBwAFUBmjbS81aN5SOEaqn3Qzf2JXIVDLUMsP_kVTOVqt94872HklHAanUvcgmvvLcZx-OOu3iawvFFzlllujbm_jZ29XHLkIZMmgEiD7UHgCYIiaku_n7o9G-OzqfKUsa1epmsADcYFlok4_JeUxTgkC1xMG3Ht1fGeLQA2SX7gMSRddK-DgAv0fsIsrMfWkJnXvxkvLIsoezecmADUwZT-mq8wOC4BQht2-s4R3I6D-CQ4Cr4-Z9VFIJa2xEDSHQLSyS68dFKDNzigQZU4bJj2sV4ecNbdbLchW7w5YWR11jBh_eFOzLqhwrKinM\",\n        \"token_type\": \"Bearer\"\n    },\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "logut",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"password\"\r\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 16:59:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Logged out successfully\",\n    \"data\": null,\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDRmNWIyMmMyM2IzZmVhNzA4N2UxOTg1NGM5ODhjYjQwZmFlNDI4ODgxZTg2YWZkNGNjMWFmNGYxYzkzMGQwNGY1NWMxMjRiMTZlNWU1M2YiLCJpYXQiOjE3NTQ4OTY0MTAuMzI5MDg3LCJuYmYiOjE3NTQ4OTY0MTAuMzI5MDg5LCJleHAiOjE3NzA3OTQwMTAuMzAwOTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fmiHYTurPIOah37fYp8VZyd5mlN8iltlNu0UglhtIZGr5lb1_QPd_RdBIlnAES-KBTFRUEta5xq2yvEkBt0p9RZd7YBfS8HIYG9eWJntm7Z8eUW8uXxtjl0ORlUUNLr2V0Tmk5g-s0L2aCXYCcXKMWqHVxmmFpGGIICdhEco7e-s08G_KIyc-fiR3sz83cAnUNvF0WUvbbObhu8nYpWxn3MndTrzrbxdesyjcyLho8w0mWn53il4QS08e4U8WabuT_i2twE9mugOeUZsttyH1hop_mgfid50MiDmYXg_cPOh4q1vlF1wsyknNuqWK-08tQ57f_WUmBpnSdi0ZcPH5yNb2McdF5W-p2rY-aXCe8J5SR-el9E46aorlR0ZrgeQ1EqnAlABrhWKfkI2JzX57ceGBjn4MH2U_ZcOWWtKLVBkY89X67sn-Zzh5qjADvlo7jSBlbGrMpCrlY8AT-CZ8hdGYqZ8PbbVTIs_o6PO7Ov_wyKubfF5PWurJTYCmh4kzZsYEJnzWNPgAyXvc-LzUmmw3lPe32bWZRz8cuLWX1QSykG6IMbvokrPbywjEOTEefXUtHmqluaT9idXHbbl5y4EWth1Bi5gr64OkrJdQtTz6bOq311c6gW1SM8k9poGGzDgLYLGqWPp_xexpZk5Xi4rmeXUI8Qe1PY4MM-rbYo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ashad\",\r\n    \"email\":\"ashad@example.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Ashad\",\r\n    \"email\":\"ashad@example.com\",\r\n    \"password\":\"password\",\r\n    \"password_confirmation\":\"password\"\r\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:16:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:16:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Admin User\",\n        \"email\": \"admin@example.com\",\n        \"roles\": [\n            {\n                \"id\": 1,\n                \"name\": \"admin\"\n            }\n        ],\n        \"permissions\": [\n            {\n                \"id\": 2,\n                \"name\": \"assign_roles\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"delete_article\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"publish_article\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"view_all_users\"\n            }\n        ]\n    },\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "view all user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4OGFlOS02ZDI4LTcyZWEtODUxYi05MzUzM2JmOGNhNjkiLCJqdGkiOiIyZGNhZjFhZjNkMjQxMzRlZmI1YjBjNDAzNTk5ZTBkZTRjYjQwMGEzOTk3NzU2ZTk0ODJlMjhiZjZmYjQ3MTc3MWVhN2Y3ZTQ1MzliNmJjNSIsImlhdCI6MTc1NDY3OTQwOC40NDc4MTQsIm5iZiI6MTc1NDY3OTQwOC40NDc4MTYsImV4cCI6MTc3MDU3NzAwOC4zODY0NDQsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.DqqC1HQzHDIUsNzecGkVVpUUiEvLIMPMBugIK9BN9ouq7tG0M5aT_mevra6FYEE6N5fRvx5zdqQak85bL3hgHjjvY-AFFYA0pucQasef-2tt0wXxSrjKoDvWOhJiF6JAprCCZouOfeJ-OGzjHT6aFAu3JA6fBkXGcWYl3T5wpu7bFdubIbkyTnq36qubmJpb5UMhrA3s6EY_Gi1V_u5YgK7ldQOUofoTszhpZZ2DeFgUzRpnYSqY3QjrYGcdMAl97Kxl0eYOAuf4RXeXOEt6PFdJXurV0QouVDh6AFwHm4mrwJzrxz0D3ICrn-dFuOomrq_1ULAzklrE2H2SD663MlHcY0xoVxgD9AUtR54sETolrQKuGiVf6di6_TsambAmN_VbUJSd0E008Fd8mD7KgwY4KvU-k7hSX92jGvrBqPfnsdjlp0pWtLiII9HPneRQH1b0SqpZgyO33xNG3Karufu6IU8Tds_hqtG41uyPaVCvfh72l_wlJh3utm3SlIcZ1FuduCJ3U9mrZM2EHRg_MLWpmdfjqNikMPjm4nOLMXClG1RVpTlSSUUhGCENu1g0-Fko0sTzl8w4ef-2GdETQ0UuXLJ8KY987loJ_8AxX1Tra-p3hCv5ug7Bz8gMKiHOqX8dM6AAugnmDiEVMfMfjuU4e3eoeN-jRRl043iD4aY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "view all user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 18:37:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Users fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Admin User\",\n            \"email\": \"admin@example.com\",\n            \"roles\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"admin\"\n                }\n            ],\n            \"permissions\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"assign_roles\"\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"delete_article\"\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"publish_article\"\n                },\n                {\n                    \"id\": 1,\n                    \"name\": \"view_all_users\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Ashad1\",\n            \"email\": \"ashad1@example.com\",\n            \"roles\": [],\n            \"permissions\": []\n        }\n    ],\n    \"errors\": null\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 19:22:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 403,\n    \"message\": \"Unauthorized - Admin only!\",\n    \"data\": null,\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Role update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\":\"author\",// author,admin,editor\r\n    \"user_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/role/update/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"role",
+								"update",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\":\"author\",\r\n    \"user_id\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users/role/update/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"role",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 19:43:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User fetched successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Ashad1\",\n        \"email\": \"ashad1@example.com\",\n        \"roles\": [\n            {\n                \"id\": 3,\n                \"name\": \"author\"\n            }\n        ],\n        \"permissions\": [\n            {\n                \"id\": 3,\n                \"name\": \"create_article\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"edit_own_article\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"view_own_articles\"\n            }\n        ]\n    },\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Role update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\":\"author\",// author,admin,editor\r\n    \"user_id\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users/role/update/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"role",
+										"update",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 06:31:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 06:31:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User fetched successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"author\",\n        \"email\": \"author@example.com\",\n        \"roles\": [\n            {\n                \"id\": 3,\n                \"name\": \"author\"\n            }\n        ],\n        \"permissions\": [\n            {\n                \"id\": 3,\n                \"name\": \"create_article\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"edit_own_article\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"view_own_articles\"\n            }\n        ]\n    },\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/articles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 21:08:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"test\",\n            \"body\": \"test tat\",\n            \"published_at\": null,\n            \"created_at\": \"2025-08-08T21:08:13.000000Z\",\n            \"updated_at\": \"2025-08-08T21:08:13.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ashad1\",\n                \"email\": \"ashad1@example.com\"\n            }\n        }\n    ],\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4OGFlOS02ZDI4LTcyZWEtODUxYi05MzUzM2JmOGNhNjkiLCJqdGkiOiI0ZWYxMzhlMTcwNTQwNTU0YmZmNzU1MzkwODhlOTc3NDQ4MjQwOWM2NTE2MTQyMmFkZGQ2YmY1ZjEzZGVmMmU0ZDk5NTk0MzYzNzcyNGU1OSIsImlhdCI6MTc1NDY4NjQyNS4wNzM2MzksIm5iZiI6MTc1NDY4NjQyNS4wNzM2NDEsImV4cCI6MTc3MDU4NDAyNS4wMDgxNTUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.DxqHRkOi_ZU4be9NG1aMrszMndnV5NRxllUmpB-oP6DObMG6yPi2KgEdQGcdzH_Dw2JCKmtiqaTGhCtq58YoOi0debRFZVJswzr6GWGL8FF58AhB0SUbkfBZ_nFse9185Qeil6wmioULAfOglb-uYBk4U9nTWvYuTCBtoN2TQz6t0SUqXlmo36jHCpvP1Y51RjKM_RpQijDe3jjDC7bH-4ozB-D_pbJD7vgkwRuymdb0XpTwqQOuIkFEqeXAZu1_ocl_z8uS9Vf1YR6ap5pI7ZJSiHshWyW20yj_wI0GfjxF5MqjhROdnzra_nHKld59ZQ2R2IV-FGwkK9a5gUUQ4Y3g8Rjr3lorKLtCxzUCeUlb564i6sLzE68Ofju053qt3LyeF3btwc66NpCbQe_pqK_dMqA10WYwvy51NS8jMvjY_l8EDNk6TnPvNVIKSZt6IuABwO-ySb-2IJz0Mpo1FPmvabIeL8p-flD4yfYEzaoy4hRCYhcHN-UT9A3xozfNscnEe_Gl5QUKq3ZjPWdO5WdnNqe1oMc5DyymcmjgsLh2fwgNwsPiKp6ZPeBzm4H2tkQx4qh78d2Nmd4cWK0vinb4w-TP-bSTlAmbuduUCRSxt_JWZF453KbtDE-7ltF4a4gsYuP9BDdNcZydHtaLmK0QfXpG-Y7Nt4lrOAE2PEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"test\",\r\n    \"body\" : \"test tat\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/articles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"test\",\r\n    \"body\" : \"test tat\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 21:08:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"test\",\n            \"body\": \"test tat\",\n            \"published_at\": null,\n            \"created_at\": \"2025-08-08T21:08:13.000000Z\",\n            \"updated_at\": \"2025-08-08T21:08:13.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ashad1\",\n                \"email\": \"ashad1@example.com\"\n            }\n        }\n    ],\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"ok\",\r\n  \"body\": \"ok\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/articles/update/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "ok",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "ok",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles/update/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 21:56:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 422,\n    \"message\": \"Validation failed\",\n    \"data\": null,\n    \"errors\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"body\": [\n            \"The body field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"ok\",\r\n  \"body\": \"ok\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles/update/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"update",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:03:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:03:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"ok\",\n            \"body\": \"ok\",\n            \"published_at\": null,\n            \"created_at\": \"2025-08-11T06:18:35.000000Z\",\n            \"updated_at\": \"2025-08-11T06:23:10.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ashad1\",\n                \"email\": \"ashad1@example.com\"\n            }\n        }\n    ],\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Publish",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDRmNWIyMmMyM2IzZmVhNzA4N2UxOTg1NGM5ODhjYjQwZmFlNDI4ODgxZTg2YWZkNGNjMWFmNGYxYzkzMGQwNGY1NWMxMjRiMTZlNWU1M2YiLCJpYXQiOjE3NTQ4OTY0MTAuMzI5MDg3LCJuYmYiOjE3NTQ4OTY0MTAuMzI5MDg5LCJleHAiOjE3NzA3OTQwMTAuMzAwOTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fmiHYTurPIOah37fYp8VZyd5mlN8iltlNu0UglhtIZGr5lb1_QPd_RdBIlnAES-KBTFRUEta5xq2yvEkBt0p9RZd7YBfS8HIYG9eWJntm7Z8eUW8uXxtjl0ORlUUNLr2V0Tmk5g-s0L2aCXYCcXKMWqHVxmmFpGGIICdhEco7e-s08G_KIyc-fiR3sz83cAnUNvF0WUvbbObhu8nYpWxn3MndTrzrbxdesyjcyLho8w0mWn53il4QS08e4U8WabuT_i2twE9mugOeUZsttyH1hop_mgfid50MiDmYXg_cPOh4q1vlF1wsyknNuqWK-08tQ57f_WUmBpnSdi0ZcPH5yNb2McdF5W-p2rY-aXCe8J5SR-el9E46aorlR0ZrgeQ1EqnAlABrhWKfkI2JzX57ceGBjn4MH2U_ZcOWWtKLVBkY89X67sn-Zzh5qjADvlo7jSBlbGrMpCrlY8AT-CZ8hdGYqZ8PbbVTIs_o6PO7Ov_wyKubfF5PWurJTYCmh4kzZsYEJnzWNPgAyXvc-LzUmmw3lPe32bWZRz8cuLWX1QSykG6IMbvokrPbywjEOTEefXUtHmqluaT9idXHbbl5y4EWth1Bi5gr64OkrJdQtTz6bOq311c6gW1SM8k9poGGzDgLYLGqWPp_xexpZk5Xi4rmeXUI8Qe1PY4MM-rbYo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/articles/publish/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								"publish",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Publish",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles/publish/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"publish",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:20:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:20:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article published successfully\",\n    \"data\": null,\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk4OGFlOS02ZDI4LTcyZWEtODUxYi05MzUzM2JmOGNhNjkiLCJqdGkiOiI0ZWYxMzhlMTcwNTQwNTU0YmZmNzU1MzkwODhlOTc3NDQ4MjQwOWM2NTE2MTQyMmFkZGQ2YmY1ZjEzZGVmMmU0ZDk5NTk0MzYzNzcyNGU1OSIsImlhdCI6MTc1NDY4NjQyNS4wNzM2MzksIm5iZiI6MTc1NDY4NjQyNS4wNzM2NDEsImV4cCI6MTc3MDU4NDAyNS4wMDgxNTUsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.DxqHRkOi_ZU4be9NG1aMrszMndnV5NRxllUmpB-oP6DObMG6yPi2KgEdQGcdzH_Dw2JCKmtiqaTGhCtq58YoOi0debRFZVJswzr6GWGL8FF58AhB0SUbkfBZ_nFse9185Qeil6wmioULAfOglb-uYBk4U9nTWvYuTCBtoN2TQz6t0SUqXlmo36jHCpvP1Y51RjKM_RpQijDe3jjDC7bH-4ozB-D_pbJD7vgkwRuymdb0XpTwqQOuIkFEqeXAZu1_ocl_z8uS9Vf1YR6ap5pI7ZJSiHshWyW20yj_wI0GfjxF5MqjhROdnzra_nHKld59ZQ2R2IV-FGwkK9a5gUUQ4Y3g8Rjr3lorKLtCxzUCeUlb564i6sLzE68Ofju053qt3LyeF3btwc66NpCbQe_pqK_dMqA10WYwvy51NS8jMvjY_l8EDNk6TnPvNVIKSZt6IuABwO-ySb-2IJz0Mpo1FPmvabIeL8p-flD4yfYEzaoy4hRCYhcHN-UT9A3xozfNscnEe_Gl5QUKq3ZjPWdO5WdnNqe1oMc5DyymcmjgsLh2fwgNwsPiKp6ZPeBzm4H2tkQx4qh78d2Nmd4cWK0vinb4w-TP-bSTlAmbuduUCRSxt_JWZF453KbtDE-7ltF4a4gsYuP9BDdNcZydHtaLmK0QfXpG-Y7Nt4lrOAE2PEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/articles/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/articles/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"1"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.21"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 08 Aug 2025 21:57:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"code\": 500,\n    \"message\": \"Unauthorized – Permission denied.\",\n    \"data\": null,\n    \"errors\": {\n        \"permission\": \"Missing permission: delete-article\"\n    }\n}"
+						},
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/articles/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:23:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:23:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article deleted successfully\",\n    \"data\": null,\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Own article",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/articles/own",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								"own"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Own article",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/api/articles/own",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										"own"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:21:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Aug 2025 07:21:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Article fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"ok\",\n            \"body\": \"ok\",\n            \"published_at\": \"2025-08-11 07:20:08\",\n            \"created_at\": \"2025-08-11T06:18:35.000000Z\",\n            \"updated_at\": \"2025-08-11T07:20:08.000000Z\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ashad1\",\n                \"email\": \"ashad1@example.com\"\n            }\n        }\n    ],\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\UserRegisterRequest;
 use App\Http\Resources\ApiResponseErrorResource;
 use App\Http\Resources\ApiResponseResource;
 use App\Http\Resources\LoginResponseResource;
+use App\Http\Resources\UserResponseResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -79,7 +80,10 @@ class AuthController extends Controller
     }
 
     public function profile(){
-        return auth()->guard('api')->user();
+        $user = Auth::guard('api')->user();
+
+        return new UserResponseResource($user);
+
     }
 
 
