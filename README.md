@@ -1,6 +1,6 @@
 # BlockVerse Tasks
 
-- Laravel 12 (PHP 8.2+)
+- Laravel 10 (PHP 8.1+)
 - Laravel Passport
 
 ### Step 1: Clone the repository
@@ -56,10 +56,8 @@ Amin credentials
 }
 ```
 ### Step 7: Passport Client Generate
-For multi login system you need to generate client.
-
 ```bash
-php artisan passport:client  --personal
+php artisan passport:install
 ```
 
 

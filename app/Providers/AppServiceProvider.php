@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use App\Models\Article;
 use App\Models\User;
-use App\Policies\ArticlePolicy;
-use Carbon\CarbonInterval;
+//use App\Policies\ArticlePolicy;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Passport\Passport;
@@ -43,9 +43,9 @@ class AppServiceProvider extends ServiceProvider
 
         Gate::define('view-own-articles', fn (User $user) => $user->hasRolePermission('view_own_articles'));
 
-        Passport::tokensExpireIn(CarbonInterval::days(15));
-        Passport::refreshTokensExpireIn(CarbonInterval::days(30));
-        Passport::personalAccessTokensExpireIn(CarbonInterval::months(6));
+//        Passport::tokensExpireIn(Carbon::now()->addDays(15));
+//        Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
+//        Passport::personalAccessTokensExpireIn(Carbon::now()->addMonths(6));
 
 
     }

@@ -19,7 +19,7 @@ class ApiResponseErrorResource extends JsonResource
             'code' => $this->resource['code'] ?? 500,
             'message' => $this->resource['message'] ?? 'Something went wrong',
             'data' => null,
-            'errors' => $this->resource['errors']
-        ];
+            'errors' => $this->resource['errors'] ?? null,
+            ];
     }
 }
